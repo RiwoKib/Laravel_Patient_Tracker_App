@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Models\Program;
+use App\Http\Controllers\ProgramController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -23,18 +23,18 @@ use App\Models\Program;
 // });
 
 
-// Route::get('/programs/{id}', function($id){
-//     return view('program', [
-//         'program' => Program::find($id)
-//     ]);
-// });
+Route::post('/addusers', [ProgramController::class, 'addUsers']);
+
+Route::get('/programs/{program}', [ProgramController::class, 'show']);
 
 
 Route::get('/', function(){
     return view('auth/login');
 });
 
-Route::get('/home', [HomeController::class, 'redirect']);
+Route::get('/home', [HomeController::class, 'redirect']); 
+
+
 
 Route::middleware([
     'auth:sanctum',
