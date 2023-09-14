@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Models\Program;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('programs',[
+//         'heading' => 'Latest Programs',
+//         'programs' => Program::all()
+//     ]);
+// });
+
+
+// Route::get('/programs/{id}', function($id){
+//     return view('program', [
+//         'program' => Program::find($id)
+//     ]);
+// });
+
+
+Route::get('/', function(){
+    return view('auth/login');
 });
+
+Route::get('/home', [HomeController::class, 'redirect']);
 
 Route::middleware([
     'auth:sanctum',
