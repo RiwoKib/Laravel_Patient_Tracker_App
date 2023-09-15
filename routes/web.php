@@ -27,12 +27,38 @@ Route::post('/addusers', [ProgramController::class, 'addUsers']);
 
 Route::get('/programs/{program}', [ProgramController::class, 'show']);
 
+Route::get('/deleteusers', [ProgramController::class, 'deleteUsers']);
+
 
 Route::get('/', function(){
     return view('auth/login');
 });
 
 Route::get('/home', [HomeController::class, 'redirect']); 
+
+Route::get('/patients', function(){
+    return view('admin.patients');
+}); 
+
+Route::get('/distributors', function(){
+    return view('admin.distributors');
+}); 
+
+Route::get('/patient_add', function(){
+    return view('admin.patient_add');
+}); 
+
+Route::get('/dose1', function(){
+    return view('admin.batch1');
+}); 
+
+Route::get('/dose2', function(){
+    return view('admin.batch2');
+}); 
+
+Route::get('/dose3', function(){
+    return view('admin.batch3');
+}); 
 
 
 
