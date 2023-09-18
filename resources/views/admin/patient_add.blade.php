@@ -5,7 +5,7 @@
 
         <aside class="z-20 flex-shrink-0 h-screen hidden w-64 overflow-y-auto bg-slate-800 md:block">
             <div class="bg-slate-900 h-20 w-64 py-2 px-5">
-                <div class="flex space-x-16 bg-green-400 p-1 rounded-md h-12 w-12">
+                <div class="flex space-x-16 bg-cyan-500 p-1 rounded-md h-12 w-12">
                     <img src="" alt="">
 
                     {{-- <div class="flex flex-col">
@@ -34,6 +34,19 @@
                     </a>
                 </a>
             </div>
+
+            <div class="flex flex-col px-4 py-4 text-gray-400 text-md space-y-3 font-medium">
+                <a href="" class="flex">
+                    <a href="" class="uppercase text-gray-600">Activities</a>
+                    <a href="/calendar" class="flex hover-text-gray-200 space-x-2">Calendar</a> 
+                    <a href="/reports" class="flex hover-text-gray-200 space-x-2">
+                        <span>Reports</span>
+                    </a>
+                    <a href="/settings" class="flex hover-text-gray-200 space-x-2">
+                        <span>Settings</span>
+                    </a>
+                </a>
+            </div>
         </aside>
 
         
@@ -55,7 +68,7 @@
                             <h6 class="text-blueGray-700 text-xl font-bold">
                                 Details
                             </h6>
-                            <button class="bg-slate-700 text-white active:bg-slate-400 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="submit">
+                            <button class="bg-cyan-500 hover:bg-cyan-700 text-white active:bg-slate-400 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="submit">
                                 Submit
                             </button>
                             </div>
@@ -106,8 +119,7 @@
                                         <select type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
                                             <option value="1">DOSE 1</option>
                                             <option value="2">DOSE 2</option>
-                                            <option value="3">DOSE 3</option>
-                                            <option value="4">FOC</option>
+                                            <option value="3">Maintenance Dose</option>
                                         </select>
                                     </div>
                                 </div>
@@ -191,7 +203,36 @@
                                         </label>
                                         <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="0701-234-567">
                                     </div>
+                                </div> 
+                            </div>
+
+                            <hr class="mt-6 border-b-1 border-gray-300">
+                            <div class="my-4">
+                                <input type="checkbox" name="nhif" id="nhif" class="form-checkbox" />
+                                <label for="nhif" class="ml-2">Does Patient Have NHIF</label>
+
+                                <p class="my-4">Is NHIF Fully Paid?</p>
+                                <div class="flex">
+                                     <!-- Code block starts -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white dark:bg-gray-100 rounded-full w-4 h-4 flex flex-shrink-0 justify-center items-center relative">
+                                            <input aria-labelledby="label1" checked type="radio" name="radio" class="checkbox appearance-none focus:opacity-100 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none border rounded-full border-gray-400 absolute cursor-pointer w-full h-full checked:border-none" />
+                                            <div class="check-icon hidden border-4 border-indigo-700 rounded-full w-full h-full z-1"></div>
+                                        </div>
+                                        <label id="label1" class="ml-2 text-sm leading-4 font-normal text-black-800 dark:text-black-100">Yes</label>
+                                    </div>
+                                    <!-- Code block ends -->
+                                    <!-- Code block starts -->
+                                    <div class="flex items-center ml-6">
+                                        <div class="bg-white dark:bg-gray-100 rounded-full w-4 h-4 flex flex-shrink-0 justify-center items-center relative">
+                                            <input aria-labelledby="label2" type="radio" name="radio" class="checkbox appearance-none focus:opacity-100 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none border rounded-full border-gray-400 absolute cursor-pointer w-full h-full checked:border-none" />
+                                            <div class="check-icon hidden border-4 border-indigo-700 rounded-full w-full h-full z-1"></div>
+                                        </div>
+                                        <label id="label2" class="ml-2 text-sm leading-4 font-normal text-black-500 dark:text-black-100">No</label>
+                                    </div>
+                                    <!-- Code block ends -->
                                 </div>
+
                             </div>
                             </form>
                         </div>
