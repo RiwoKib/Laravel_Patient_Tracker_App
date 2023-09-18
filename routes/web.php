@@ -60,6 +60,26 @@ Route::get('/dose3', function(){
     return view('admin.batch3');
 }); 
 
+Route::get('/calendar', function(){
+    return view('admin.calendar');
+}); 
+
+Route::get('/reports', function(){
+    return view('admin.reports');
+});
+
+Route::get('/settings', function(){
+    return view('admin.settings');
+}); 
+
+Route::get('/patient_view', function(){
+    return view('admin.patient_view');
+}); 
+
+Route::get('/messages', function(){
+    return view('admin.messages');
+}); 
+
 
 
 Route::middleware([
