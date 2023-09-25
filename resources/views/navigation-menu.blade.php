@@ -8,12 +8,33 @@
                     <a href="{{ route('dashboard') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
-                </div>
+                </div> 
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('admin.patient_add') }}" :active="request()->routeIs('admin.patient_add')">
+                        {{ __('Add Patient') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('dashboard') }}">
+                        {{ __('All Patients') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('dashboard') }}">
+                        {{ __('Dose 1') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('dashboard') }}">
+                        {{ __('Dose 2') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('dashboard') }}">
+                        {{ __('Dose 3') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('dashboard') }}">
+                        {{ __('Maintenance Dose') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('dashboard') }}">
+                        {{ __('Distributors') }}
                     </x-nav-link>
                 </div>
             </div>
